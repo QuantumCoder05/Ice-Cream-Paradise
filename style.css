@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box; /* Prevents overflow issues */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+nav {
+    background-color: #e4c2e7;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #e73778;
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url('https://via.placeholder.com/1200x300?text=Ice+Cream+Header');
+    background-size: cover;
+    color: #fff;
+    animation: slideIn 0.5s ease; /* Animation for header */
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    color: #3c0213;
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    padding: 0; /* Remove padding from main */
+}
+
+.flavors {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
+    justify-content: center;
+    background-image: url('b1.jpg'); /* Add your background image here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Optional: round the corners */
+    margin-top: -20px; /* Pulls the section up closer to the header */
+}
+
+.flavors h2 {
+    width: 100%; /* Make the heading take full width */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.flavor {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effects */
+    animation: fadeIn 0.5s ease; /* Animation for flavor cards */
+}
+
+.flavor img {
+    border-radius: 8px;
+    width: 100%; /* Makes the image responsive */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    max-width: 100%; /* Ensures the image does not exceed its container */
+}
+
+.flavor h3 {
+    color: #3c0213;
+}
+
+.flavor p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.flavor:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+/* Keyframe animation for flavor cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe animation for header */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e73778;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
